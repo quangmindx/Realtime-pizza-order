@@ -16,15 +16,8 @@ app.set('views', path.join(__dirname, '/resources/views'));
 app.set('view engine', 'ejs');
 
 
-
-app.get('/', (req, res) => {
-    res.render('home')
-});
-
-app.get('/cart', (req, res) => {
-    res.render('customers/cart')
-});
-
+//Routes web.js
+require('./routes/web')(app);
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
