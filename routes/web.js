@@ -5,7 +5,6 @@ const cartController = require('../app/http/controllers/customers/cartController
 
 
 function initRoutes(app){
-
     //GET
     app.get('/', homeController().index);
     app.get('/login', authController().login);  
@@ -16,6 +15,7 @@ function initRoutes(app){
     app.post('/register', (req, res) => {
         res.render('auth/register');
     });
+    app.post('/update-cart', cartController().update)
 };
 
 
