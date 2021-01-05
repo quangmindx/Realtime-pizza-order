@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Realtime pizza app</title>
+    <title><%= title %></title>
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -55,7 +56,11 @@
       </div>
     </nav>
     <%- body %>
-    <footer></footer>
+    <footer class="mx-auto py-4" style="background-color: #F8F8F8;">
+      <p class="text-center text-gray-500 text-xs">
+        &copy;2020 Quang Master. All rights reserved.
+      </p>
+    </footer>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/app.js"></script>
   </body>
